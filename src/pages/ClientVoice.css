@@ -1,0 +1,9 @@
+
+.swiper-pagination-bullet {
+  background-color: #999;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background-color: #1d4ed8; /* Tailwind blue-700 */
+  opacity: 1;
+}

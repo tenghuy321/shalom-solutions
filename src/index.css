@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav_link.active{
+  background-color: #411259;
+  border-radius: 30px;
+}
+
+.testing1{
+  background-image: url('assets/images/Group1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  color: white;
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+}
+
+
+.testing2 {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
