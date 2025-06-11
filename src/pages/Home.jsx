@@ -282,7 +282,7 @@ const Home = () => {
             ))}
           </div>
           <div>
-            <div className="w-full h-[300px] md:h-full flex items-center justify-center mt-4 lg:mt-[6rem]">
+            <div className="w-full h-[200px] md:h-full flex items-center justify-center mt-4 lg:mt-[6rem]">
               <img src={faqImage} alt="FAQ" className="w-full h-full bg-cover bg-center rounded-md" data-aos="fade-left" data-aos-duration="1200" />
             </div>
           </div>
