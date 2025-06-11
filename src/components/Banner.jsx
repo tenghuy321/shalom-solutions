@@ -4,7 +4,7 @@ import LogoWhite from '../assets/images/logo-white.png'
 const Banner = () => {
     return (
         <div className='w-full min-h-[40vh] md:min-h-[60vh] relative overflow-hidden flex items-center justify-center'>
-            <div className='absolute inset-0 bg-cover bg-left bg-no-repeat'
+            <div className='absolute inset-0 bg-cover bg-left bg-no-repeat md:bg-fixed'
                 style={{ backgroundImage: `url(${BannerFooter})` }}></div>
 
             <div className='absolute inset-0 bg-[#2f0e40] opacity-70 bg-blend-multiply'></div>
