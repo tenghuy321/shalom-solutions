@@ -10,25 +10,25 @@ const Navbar = () => {
             <section className='absolute top-0 left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center z-50 w-full pt-4'>
                 <ul className='bg-[#fff] flex items-center justify-center gap-2 xl:gap-4 px-1 xl:px-2 ml-3 text-white rounded-[30px] h-[40px] xl:h-[50px] pointer-events-auto'>
                     <li className=''>
-                        <NavLink to="/" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Home</NavLink>
+                        <NavLink to="/" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Home</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/about" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>About Us</NavLink>
+                        <NavLink to="/about" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>About Us</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/services" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Professional Services</NavLink>
+                        <NavLink to="/services" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Professional Services</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/events" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Events</NavLink>
+                        <NavLink to="/events" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Events</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/client-voice" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Client's Voices</NavLink>
+                        <NavLink to="/client-voice" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Client's Voices</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/career" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Career</NavLink>
+                        <NavLink to="/career" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Career</NavLink>
                     </li>
                     <li className=''>
-                        <NavLink to="/contact" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[11px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Contact Us</NavLink>
+                        <NavLink to="/contact" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] leading-none hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Contact Us</NavLink>
                     </li>
                 </ul>
             </section>

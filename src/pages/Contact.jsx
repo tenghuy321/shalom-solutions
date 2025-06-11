@@ -38,7 +38,7 @@ const Contact = () => {
                 <AiOutlinePhone />
                 <p>093 777 253</p>
               </a>
-              <a href="mailto:shalomsolution@gmail.com" className="flex items-center space-x-2">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com" className="flex items-center space-x-2">
                 <TbMail />
                 <p>shalomsolution@gmail.com</p>
               </a>
@@ -50,7 +50,7 @@ const Contact = () => {
                 <h1 className="text-[70px] font-bold text-center lg:mr-[4rem]" >Contact Us</h1>
                 <p className="text-[20px] md:text-[25px] font-[700]">Let’s connect with us!</p>
                 <p>093 777 253</p>
-                <p>shalomsolution@gmail.com</p>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com">shalomsolution@gmail.com</a>
                 <p>#14, Street 311, Sangkat Boeng Kar Ti Pir, Khan Toul Kork, Phnom Penh.</p>
               </div>
             </div>
@@ -207,7 +207,7 @@ const Contact = () => {
                   <div className="flex flex-col space-y-4 items-start justify-center text-[12px] md:text-[14px] pt-4">
                     <p className="text-[20px] md:text-[25px] font-[700]">Let’s connect with us!</p>
                     <p>093 777 253</p>
-                    <p>shalomsolution@gmail.com</p>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com">shalomsolution@gmail.com</a>
                     <p>#14, Street 311, Sangkat Boeng Kar Ti Pir, Khan Toul Kork, Phnom Penh.</p>
                   </div>
                 </div>

@@ -26,6 +26,7 @@ import Loading from "../components/Loading"
 
 const ClientVoice = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const ClientVoice = () => {
                 <AiOutlinePhone />
                 <p>093 777 253</p>
               </a>
-              <a href="mailto:shalomsolution@gmail.com" className="flex items-center space-x-2">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com" className="flex items-center space-x-2">
                 <TbMail />
                 <p>shalomsolution@gmail.com</p>
               </a>
@@ -195,61 +196,48 @@ const ClientVoice = () => {
       </section>
 
       <section className='w-full h-full text-[12px] mt-[2rem] md:mt-[5rem] pb-[2rem]'>
-        <div className='w-full max-w-7xl bg-[#37104C] ml-auto relative'>
-          <h1 className='text-[16px] md:text-[18px] text-[#fff] font-[600] py-4 px-4'>
+        <div className='w-full max-w-7xl ml-auto bg-[#37104C]'>
+          <h1 className='text-base md:text-lg text-white font-semibold py-4 px-4'>
             Clients' Testimonials
           </h1>
 
-          <Swiper
-            grabCursor={true}
-            effect="creative"
-            modules={[EffectCreative, Pagination]}
-            pagination={{ clickable: true }}
-            creativeEffect={{
-              prev: {
-                shadow: true,
-                translate: [0, 0, -400],
-                opacity: 0,
-              },
-              next: {
-                translate: ['100%', 0, 0],
-              },
-            }}
-            className="mySwiper ">
-            <SwiperSlide className='absolute top-0 left-0 w-[90%] h-full bg-[#fff] rounded-tr-[100px] p-4'>
-              <div className='flex flex-col md:flex-row items-end justify-between gap-4 text-[#000]'>
-                <div className='w-full md:w-3/4 space-y-4 p-4 lg:p-8 order-2 md:order-none'>
-                  <p className=''>At SHALOM SOLUTION CO., LTD. we hold the satisfaction of our clients in the highest regard. The positive feedback and testimonials from those we serve are a true reflection of our commitment to excellence in providing bespoke services and building long-lasting partnerships.</p>
-                  <h1 className='font-[600]'>Below are some testimonials from our valued clients:</h1>
-                  <p>SHALOM SOLUTION has consistently demonstrated a high level of professionalism and expertise. Their team’s in-depth knowledge has been invaluable in helping us navigate the complexities of accounting and tax regulations with confidence.</p>
-                  <p>We are extremely pleased with the personalized service we have received from SHALOM SOLUTION. Their tailored solutions have made a significant impact on the efficiency of our business operations.</p>
-                </div>
+          <div className='w-full bg-white md:rounded-tr-[100px] p-4'>
+            <div className='flex flex-col md:flex-row gap-6 items-center'>
+              <div className='w-full md:w-3/4 space-y-2 order-2 md:order-none'>
+                <p>At SHALOM SOLUTION CO., LTD. we hold the satisfaction of our clients in the highest regard. The positive feedback and testimonials from those we serve are a true reflection of our commitment to excellence in providing bespoke services and building long-lasting partnerships.</p>
 
-                <div className='w-full md:w-1/4 h-full flex items-center justify-center order-1 md:order-none'>
-                  <div className="w-40 h-40 lg:w-56 lg:h-56 bg-gray-600 rounded-full flex items-center justify-center text-white">
+                <h2 className='font-semibold'>Below are some testimonials from our valued clients:</h2>
 
+                <p>SHALOM SOLUTION has consistently demonstrated a high level of professionalism and expertise. Their team's in-depth knowledge has been invaluable in helping us navigate the complexities of accounting and tax regulations with confidence.</p>
+
+                <p>We are extremely pleased with the personalized service we have received from SHALOM SOLUTION. Their tailored solutions have made a significant impact on the efficiency of our business operations.</p>
+
+                {/* Collapsible Content */}
+                <div className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'max-h-[1000px]' : 'max-h-0'}`}>
+                  <div className='space-y-2 pt-2'>
+                    <p>From the initial consultation to ongoing support, the team at SHALOM SOLUTION has exceeded our expectations. Their insightful advice and unwavering support have been key factors in our continued success. We highly recommend their services.</p>
+                    <p>We greatly appreciate the trust and confidence our clients place in us. Their feedback continues to drive us to innovate and improve, ensuring that we remain a trusted partner for all of your financial and business solution needs.</p>
+                    <p>We are extremely pleased with the personalized service we have received from SHALOM SOLUTION. Their tailored solutions have made a significant impact on the efficiency of our business operations.</p>
+                    <h2 className='font-semibold'>Quick contact info</h2>
+                    <p>We pride ourselves on building lasting relationships with our clients. Our commitment to delivering exceptional service and results has earned us a reputation as trusted advisors in the community.</p>
                   </div>
                 </div>
+
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="mt-2 px-4 py-2 bg-[#37104C] text-white rounded-full hover:bg-[#4a1a66] transition-colors text-[12px]"
+                >
+                  {isExpanded ? 'Read Less' : 'Read More'}
+                </button>
               </div>
-            </SwiperSlide>
-            <SwiperSlide className='absolute top-0 left-0 w-[90%] h-full bg-[#fff] rounded-tr-[100px] p-4'>
-              <div className='flex flex-col md:flex-row items-end justify-between gap-4 text-[#000]'>
-                <div className='w-full md:w-3/4 space-y-4 p-4 lg:p-8 order-2 md:order-none'>
-                  <p className=''>At SHALOM SOLUTION CO., LTD. we hold the satisfaction of our clients in the highest regard. The positive feedback and testimonials from those we serve are a true reflection of our commitment to excellence in providing bespoke services and building long-lasting partnerships.</p>
-                  <h1 className='font-[600]'>Below are some testimonials from our valued clients:</h1>
-                  <p>SHALOM SOLUTION has consistently demonstrated a high level of professionalism and expertise. Their team’s in-depth knowledge has been invaluable in helping us navigate the complexities of accounting and tax regulations with confidence.</p>
-                  <p>We are extremely pleased with the personalized service we have received from SHALOM SOLUTION. Their tailored solutions have made a significant impact on the efficiency of our business operations.</p>
-                </div>
 
-                <div className='w-full md:w-1/4 h-full flex items-center justify-center order-1 md:order-none'>
-                  <div className="w-40 h-40 lg:w-56 lg:h-56 bg-gray-600 rounded-full flex items-center justify-center text-white">
+              <div className='w-full md:w-1/4 h-full flex items-center justify-center order-1 md:order-none'>
+                <div className="w-40 h-40 lg:w-56 lg:h-56 bg-gray-600 rounded-full flex items-center justify-center text-white">
 
-                  </div>
                 </div>
               </div>
-            </SwiperSlide>
-          </Swiper>
-
+            </div>
+          </div>
         </div>
       </section>
 

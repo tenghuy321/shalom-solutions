@@ -17,8 +17,53 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import Loading from "../components/Loading"
 
+const accordionData = [
+  {
+    id: 1,
+    question: 'What is the deadline for submitting the Annual Tax on Income Declaration (TOI)?',
+    answer: 'The deadline for submitting the TOI is March 31st each year.'
+  },
+  {
+    id: 2,
+    question: 'What documents are required for tax preparation?',
+    answer: 'Pending'
+  },
+  {
+    id: 3,
+    question: 'How much does your tax preparation service cost?',
+    answer: 'Pending'
+  },
+  {
+    id: 4,
+    question: 'Do you offer audit support services?',
+    answer: 'Pending'
+  },
+  {
+    id: 5,
+    question: 'How do I schedule a consultation?',
+    answer: 'Pending'
+  },
+  {
+    id: 6,
+    question: 'Is my financial information secure with your company?',
+    answer: 'Pending'
+  },
+  {
+    id: 7,
+    question: 'What types of businesses do you serve?',
+    answer: 'Pending'
+  },
+  {
+    id: 8,
+    question: 'Do you offer monthly bookkeeping services?',
+    answer: 'Pending'
+  }
+];
+
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [openId, setOpenId] = useState(null);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -32,6 +77,13 @@ const Home = () => {
   if (isLoading) {
     return <Loading />;
   }
+
+
+
+  const toggleAccordion = (id) => {
+    setOpenId(openId === id ? null : id);
+  };
+
   return (
     <>
       <ScrollToTop />
@@ -45,7 +97,7 @@ const Home = () => {
                 <AiOutlinePhone />
                 <p>093 777 253</p>
               </a>
-              <a href="mailto:shalomsolution@gmail.com" className="flex items-center space-x-2">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com" className="flex items-center space-x-2">
                 <TbMail />
                 <p>shalomsolution@gmail.com</p>
               </a>
@@ -201,137 +253,52 @@ const Home = () => {
 
       <section className='relative w-full min-h-screen text-[14px] py-[1rem] md:py-[2rem] px-0 md:px-[2rem] overflow-hidden'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          <div className='sm:col-span-2 rounded-md shadow-md p-2 md:p-10' data-aos="fade-right" data-aos-duration="1200">
+          <div className="col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400]" data-aos="fade-right" data-aos-duration="1200">
             <h1 className='text-[16px] md:text-[20px] text-[#411259] font-[600] mb-4 mt-4 md:mt-0 md:mb-6'>General FAQS</h1>
-
-            <div id="accordion-open" data-accordion="open" className='text-[10px] md:text-[14px] font-[400]'>
-              {/* 1 */}
-              <h2 id="accordion-open-heading-1">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 rounded-t-xl gap-3 " data-accordion-target="#accordion-open-body-1" aria-expanded="true" aria-controls="accordion-open-body-1">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg>  What is the deadline for submitting the Annual Tax on Income Declaration (TOI)?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-1" className="hidden" aria-labelledby="accordion-open-heading-1">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">The deadline for submitting the TOI is March 31st each year.</p>
+            {accordionData.map((item) => (
+              <div key={item.id}>
+                <h2 id={`accordion-heading-${item.id}`}>
+                  <button
+                    type="button"
+                    className={`bg-[#fff] flex items-center justify-between w-full p-5 text-[#000] border border-b-1 border-gray-200 gap-3 ${item.id === 1 ? 'rounded-t-xl' : ''
+                      }`}
+                    onClick={() => toggleAccordion(item.id)}
+                    aria-expanded={openId === item.id}
+                    aria-controls={`accordion-body-${item.id}`}
+                  >
+                    <span className="flex items-center text-[#411259] text-start">
+                      <svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                          fillRule="evenodd"
+                          d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                      {item.question}
+                    </span>
+                    <svg
+                      data-accordion-icon
+                      className={`w-3 h-3 transition-transform duration-300 ${openId === item.id ? 'rotate-90' : ''}`}
+                      fill="none"
+                      viewBox="0 0 10 6"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
+                    </svg>
+                  </button>
+                </h2>
+                <div
+                  id={`accordion-body-${item.id}`}
+                  className={`${openId === item.id ? 'block' : 'hidden'} p-5 border border-b-1 border-gray-200 bg-[#fff]`}
+                >
+                  <p className="mb-2 text-[#411259]">{item.answer}</p>
                 </div>
               </div>
-              {/* 2 */}
-              <h2 id="accordion-open-heading-2">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-2" aria-expanded="false" aria-controls="accordion-open-body-2">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> What documents are required for tax preparation?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-2" className="hidden" aria-labelledby="accordion-open-heading-2">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 3 */}
-              <h2 id="accordion-open-heading-3">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-3" aria-expanded="false" aria-controls="accordion-open-body-3">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> How much does your tax preparation service cost?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-3" className="hidden" aria-labelledby="accordion-open-heading-3">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 4 */}
-              <h2 id="accordion-open-heading-4">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-4" aria-expanded="false" aria-controls="accordion-open-body-4">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> Do you offer audit support services?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-4" className="hidden" aria-labelledby="accordion-open-heading-4">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 5 */}
-              <h2 id="accordion-open-heading-5">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-5" aria-expanded="false" aria-controls="accordion-open-body-5">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> How do I schedule a consultation?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-5" className="hidden" aria-labelledby="accordion-open-heading-5">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 6 */}
-              <h2 id="accordion-open-heading-6">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-6" aria-expanded="false" aria-controls="accordion-open-body-6">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> Is my financial information secure with your company?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-6" className="hidden" aria-labelledby="accordion-open-heading-6">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 7 */}
-              <h2 id="accordion-open-heading-7">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-0 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-7" aria-expanded="false" aria-controls="accordion-open-body-7">
-                  <span className="flex items-center text-[#411259] text-start"><svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path></svg> What types of businesses do you serve?</span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-7" className="hidden" aria-labelledby="accordion-open-heading-7">
-                <div className="p-5 border border-b-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-              {/* 8 */}
-              <h2 id="accordion-open-heading-8">
-                <button type="button" className="bg-[#fff] flex items-center justify-between w-full p-5 rtl:text-right text-[#000] border border-b-gray-200 border-gray-200 gap-3" data-accordion-target="#accordion-open-body-8" aria-expanded="false" aria-controls="accordion-open-body-8">
-                  <span className="flex items-center text-[#411259] text-start" >
-                    <svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd">
-                      </path>
-                    </svg> Do you offer monthly bookkeeping services?
-                  </span>
-                  <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
-                  </svg>
-                </button>
-              </h2>
-              <div id="accordion-open-body-8" className="hidden" aria-labelledby="accordion-open-heading-8">
-                <div className="p-5 border border-t-0 border-[#fff]">
-                  <p className="mb-2 text-[#411259]">Pending</p>
-                </div>
-              </div>
-            </div>
-
+            ))}
           </div>
-
-          <div className='flex flex-col gap-4 items-center'>
-            <div className='bg-gray-600 w-full h-full rounded-md shadow-md' data-aos="fade-left" data-aos-duration="1200">
-
-            </div>
-            <div className='bg-gray-600 w-full h-full rounded-md shadow-md' data-aos="fade-left" data-aos-duration="1400">
-
+          <div>
+            <div className="w-full h-full flex items-center justify-center bg-gray-500 p-4">
+              <img src="" alt="FAQ" className="w-[80%] h-auto" data-aos="fade-left" data-aos-duration="1200" />
             </div>
           </div>
         </div>

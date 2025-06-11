@@ -44,7 +44,7 @@ const Events = () => {
                 <AiOutlinePhone />
                 <p>093 777 253</p>
               </a>
-              <a href="mailto:shalomsolution@gmail.com" className="flex items-center space-x-2">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com" className="flex items-center space-x-2">
                 <TbMail />
                 <p>shalomsolution@gmail.com</p>
               </a>
