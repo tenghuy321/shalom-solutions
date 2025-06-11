@@ -8,7 +8,7 @@ const Navbar = () => {
 
         <>
             <section className='absolute top-0 left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center z-50 w-full pt-4'>
-                <ul className='bg-[#fff] flex items-center justify-center gap-2 xl:gap-3 px-1 xl:px-4 ml-3 text-white rounded-[30px] h-[40px] xl:h-[50px] pointer-events-auto'>
+                <ul className='bg-[#fff] flex items-center justify-center gap-2 xl:gap-3 px-1 xl:px-4 2xl:px-[24px] ml-3 text-white rounded-[30px] h-[40px] xl:h-[50px] pointer-events-auto'>
                     <li className=''>
                         <NavLink to="/" className={({ isActive }) => `px-2 xl:px-3 py-2 nav_link text-[10px] xl:text-[14px] hover:text-[#fff] hover:bg-[#411259] transform hover:rounded-[30px] transition-all duration-500 ${isActive ? "active" : "text-[#411259]"}`}>Home</NavLink>
                     </li>

@@ -271,7 +271,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-7xl mx-auto text-[12px] lg:text-[14px] px-6 md:px-20 pt-10 pb-10 md:pb-20">
+      <section className="w-full max-w-7xl mx-auto text-[12px] lg:text-[14px] px-6 md:px-20 pt-10 pb-10 md:pt-0 md:pb-20">
         {profiles.map((profile) => {
           const isLeft = profile.imagePosition === "left";
           const isExpanded = expanded[profile.id];

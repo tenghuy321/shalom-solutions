@@ -92,13 +92,13 @@ const ContactFooter = () => {
                         </div>
                     </div>
                     <div className='w-full h-full'>
-                        <div className='w-full h-full py-10 relative flex flex-col items-start justify-center pl-20 xl:pl-40 pr-10' style={{ backgroundImage: `url(${footer2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
+                        <div className='w-full h-full py-10 relative flex flex-col items-start justify-center pl-20 xl:pl-40 2xl:pl-60 pr-10' style={{ backgroundImage: `url(${footer2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
                             <div className='pl-20 text-[#fff] text-[12px] md:text-[14px] font-[300]'>
                                 <h1 className='text-[20px] text-[#fff] my-4 font-[600] mb-10 xl:mb-12'>Let’s connect with us!</h1>
                                 <div className='flex flex-col items-start justify-start gap-4'>
                                     <a href="#">093 777 253</a>
                                     <a href="#">shalomsolution@gmail.com</a>
-                                    <a href="#">#14, Street 311, Sangkat Boeng Kar Ti Pir, Khan Toul Kork, Phnom Penh.</a>
+                                    <a href="#">#14, Street 311, Sangkat Boeng Kar Ti Pir, <br /> Khan Toul Kork, Phnom Penh.</a>
                                     <p>Opening Hours: Monday - Friday <br />
                                         8:00 AM - 5:00 PM</p>
                                 </div>

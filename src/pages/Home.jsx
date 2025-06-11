@@ -236,9 +236,9 @@ const Home = () => {
         <p className='py-2' data-aos="fade-left" data-aos-duration="1200">we understand the complexities of tax regulations and their significant impact on your financial well-being. Our team of dedicated professionals is committed to delivering precise and effective tax solutions tailored to your unique needs. Our primary goal is to simplify the tax process while ensuring full compliance with applicable laws for both individuals and businesses. With our team’s experience and commitment, we aim to be your trusted partner in managing your finances and maximizing your savings.</p>
       </section>
 
-      <section className='relative w-full min-h-screen text-[14px] py-[1rem] md:py-[2rem] px-0 md:px-[2rem] overflow-hidden'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-4 px-2 overflow-hidden'>
-          <div className="col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400] bg-[#411259]" data-aos="fade-right" data-aos-duration="1200">
+      <section className='relative w-full min-h-screen text-[14px] py-[1rem] md:my-[2rem] px-0 lg:px-[2rem] overflow-hidden'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-4 px-2'>
+          <div className="md:col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400] bg-[#411259]" data-aos="fade-right" data-aos-duration="1600">
             <h1 className='text-[16px] md:text-[20px] text-[#fff] font-[600] mb-4 mt-4 md:mt-0 md:mb-6 pl-0 md:pl-5'>General FAQS</h1>
             {accordionData.map((item) => (
               <div key={item.id}>
@@ -283,7 +283,7 @@ const Home = () => {
           </div>
           <div>
             <div className="w-full h-[200px] md:h-full flex items-center justify-center mt-4 lg:mt-[6rem]">
-              <img src={faqImage} alt="FAQ" className="w-full h-full bg-cover bg-center rounded-md" data-aos="fade-left" data-aos-duration="1200" />
+              <img src={faqImage} alt="FAQ" className="w-full h-full bg-cover bg-center rounded-md" data-aos="fade-left" data-aos-duration="1600" />
             </div>
           </div>
         </div>
