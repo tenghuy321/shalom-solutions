@@ -1,8 +1,9 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background from '../assets/images/banner.png'
-import background1 from '../assets/images/banner-1.png'
+import background2 from '../assets/images/Group3.png'
+import background1 from '../assets/images/Group1.png'
+
 import CareerImage from '../assets/images/career.png'
 import ScrollToTop from '../components/ScrollToTop'
 
@@ -37,8 +38,8 @@ const Career = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col relative">
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
+          <div className="text-[#fff] w-full h-full flex flex-col relative">
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -106,7 +107,7 @@ const Career = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
             </div>
           </div>

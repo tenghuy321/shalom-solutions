@@ -1,6 +1,6 @@
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background2 from '../assets/images/Group2.png'
+import background2 from '../assets/images/services.png'
 import background1 from '../assets/images/Group1.png'
 
 import WhatWeDo from '../assets/images/WhatWeDo.png'

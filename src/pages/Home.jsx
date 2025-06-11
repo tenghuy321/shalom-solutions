@@ -78,8 +78,6 @@ const Home = () => {
     return <Loading />;
   }
 
-
-
   const toggleAccordion = (id) => {
     setOpenId(openId === id ? null : id);
   };
@@ -252,7 +250,7 @@ const Home = () => {
       </section>
 
       <section className='relative w-full min-h-screen text-[14px] py-[1rem] md:py-[2rem] px-0 md:px-[2rem] overflow-hidden'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 lg:gap-4 px-2'>
           <div className="col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400] bg-[#411259]" data-aos="fade-right" data-aos-duration="1200">
             <h1 className='text-[16px] md:text-[20px] text-[#fff] font-[600] mb-4 mt-4 md:mt-0 md:mb-6 pl-0 md:pl-5'>General FAQS</h1>
             {accordionData.map((item) => (
@@ -260,7 +258,7 @@ const Home = () => {
                 <h2 id={`accordion-heading-${item.id}`}>
                   <button
                     type="button"
-                    className={`bg-[#411259] flex items-center justify-between w-full p-5 text-[#fff] gap-3 ${item.id === 1 ? 'rounded-t-xl' : ''
+                    className={`bg-[#411259] flex items-center justify-between w-full p-2 md:p-5 text-[#fff] gap-3 ${item.id === 1 ? 'rounded-t-xl' : ''
                       }`}
                     onClick={() => toggleAccordion(item.id)}
                     aria-expanded={openId === item.id}
@@ -289,16 +287,16 @@ const Home = () => {
                 </h2>
                 <div
                   id={`accordion-body-${item.id}`}
-                  className={`${openId === item.id ? 'block' : 'hidden'} p-5 bg-[#411259]`}
+                  className={`${openId === item.id ? 'block' : 'hidden'} py-2 pl-4 md:pl-12 bg-[#411259]`}
                 >
-                  <p className="mb-2 text-[#411259]">{item.answer}</p>
+                  <p className="mb-2 text-[#fff]">{item.answer}</p>
                 </div>
               </div>
             ))}
           </div>
           <div>
-            <div className="w-full h-full flex items-center justify-center bg-gray-500 p-4">
-              <img src="" alt="FAQ" className="w-[80%] h-auto" data-aos="fade-left" data-aos-duration="1200" />
+            <div className="w-full h-[300px] md:h-full flex items-center justify-center bg-gray-500 mt-4 lg:mt-0">
+              {/* <img src="" alt="FAQ" className="w-[80%] h-auto" data-aos="fade-left" data-aos-duration="1200" /> */}
             </div>
           </div>
         </div>

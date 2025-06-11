@@ -2,7 +2,7 @@ import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 // import background from '../assets/images/banner.png'
 import team from '../assets/images/team.png'
-import background2 from '../assets/images/Group2.png'
+import background2 from '../assets/images/Group3.png'
 import background1 from '../assets/images/Group1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";

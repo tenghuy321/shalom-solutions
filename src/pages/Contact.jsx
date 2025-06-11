@@ -4,7 +4,8 @@ import { FaRegClock } from "react-icons/fa6";
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 
-import background1 from '../assets/images/banner-1.png'
+import background2 from '../assets/images/Group2.png'
+import background1 from '../assets/images/Group1.png'
 
 import ScrollToTop from '../components/ScrollToTop'
 import { useEffect, useState } from 'react'
@@ -30,8 +31,8 @@ const Contact = () => {
     <>
       <ScrollToTop />
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px] xl:text-[14px]">
-        <div className="relative w-full h-full rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col relative">
+        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
+          <div className="testing1 w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -51,7 +52,7 @@ const Contact = () => {
                 <p className="text-[20px] md:text-[25px] font-[700]">Let’s connect with us!</p>
                 <p>093 777 253</p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com">shalomsolution@gmail.com</a>
-                <p>#14, Street 311, Sangkat Boeng Kar Ti Pir, Khan Toul Kork, Phnom Penh.</p>
+                <p>#14, Street 311, Sangkat Boeng Kar Ti Pir, <br /> Khan Toul Kork, Phnom Penh.</p>
                 <p>Opening Hours: Monday - Friday <br />
                   8:00 AM - 5:00 PM</p>
               </div>
@@ -110,7 +111,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
 
               <div className='flex flex-col items-center pl-[14%] xl:pl-[13%] justify-center h-full text-[#411259]' data-aos="zoom-in-up" data-aos-duration="1200">
