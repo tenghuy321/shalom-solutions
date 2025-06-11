@@ -349,9 +349,9 @@ const Services = () => {
           {items.map((item, index) => {
             const { title, description } = item;
             return (
-              <div key={index} className='group relative w-full sm:w-[48%] lg:w-[32%] '>
-                <div className='absolute w-full h-full z-1 border border-[#411259] transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:rotate-2'></div>
-                <div className='absolute w-full h-full z-1 border border-[#411259] transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:-rotate-2'> </div>
+              <div key={index} className='group relative w-full sm:w-[48%] lg:w-[32%] hover:translate-y-[-5px] transition-transform duration-300 ease-in-out'>
+                {/* <div className='absolute w-full h-full z-1 border border-[#411259] transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:rotate-2'></div> */}
+                {/* <div className='absolute w-full h-full z-1 border border-[#411259] transition-all duration-300 opacity-0 group-hover:opacity-100 group-hover:-rotate-2'> </div> */}
                 <div className='p-4 relative w-full h-full z-[999] bg-[#F7ECFE] rounded-lg shadow-md'>
                   <h3 className='text-[16px] md:text-[18px] font-[600] text-[#411259] mb-2'>{title}</h3>
                   <p className='min-h-[50px] md:min-h-[60px]'>{description}</p>
