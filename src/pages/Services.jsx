@@ -1,7 +1,7 @@
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background from '../assets/images/banner.png'
-import background1 from '../assets/images/banner-1.png'
+import background2 from '../assets/images/Group2.png'
+import background1 from '../assets/images/Group1.png'
 
 import WhatWeDo from '../assets/images/WhatWeDo.png'
 import ServiceTeam from '../assets/images/person-1.png'
@@ -90,8 +90,8 @@ const Services = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col relative">
+        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
+          <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
                 <AiOutlinePhone />
@@ -157,7 +157,7 @@ const Services = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
             </div>
           </div>
@@ -239,7 +239,7 @@ const Services = () => {
       </section>
 
       {/* who we do */}
-      <section className="relative w-full px-4 mt-[2rem] md:mt-[5rem] pb-[2rem]">
+      <section className="relative w-full px-4 mt-[2rem] md:mt-[5rem] xl:mt-[7rem] pb-[2rem]">
         <h1 className='text-[20px] text-[#411259] block lg:hidden mb-10 font-[700] text-center'>What We Do</h1>
 
         <div className="max-w-6xl mx-auto flex flex-col items-center px-2 ">
@@ -263,7 +263,7 @@ const Services = () => {
                 <img
                   src={WhatWeDo}
                   alt="Calculator"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain hover:transform hover:-translate-y-[5px] transition-transform duration-300 ease-in-out"
                 />
               </div>
               <p className="mt-2 text-[30px] font-semibold text-[#411259]">What We Do</p>
@@ -343,7 +343,7 @@ const Services = () => {
       </section>
 
       {/* what set us apart */}
-      <section className='w-full text-[12px] lg:text-[14px] px-4 my-10'>
+      <section className='w-full text-[12px] lg:text-[14px] px-4 my-20'>
         <h2 className='text-[24px] sm:text-[30px] lg:text-[40px] font-[700] text-[#411259] text-center mb-4' data-aos="zoom-in-up" data-aos-duration="1400">What Sets Us Apart</h2>
         <div className='max-w-7xl mx-auto flex items-center justify-center flex-wrap gap-4' data-aos="fade-up" data-aos-duration="1200">
           {items.map((item, index) => {

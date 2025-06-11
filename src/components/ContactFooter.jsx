@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 const ContactFooter = () => {
     return (
         <footer className='contact_footer'>
-            <h1 className='text-[20px] md:text-[30px] font-[700] text-[#411259] text-center py-5 md:py-10' data-aos="zoom-in-up" data-aos-duration="1200">Contact !</h1>
+            <h1 className='text-[25px] md:text-[30px] font-[700] text-[#411259] text-center py-10' data-aos="zoom-in-up" data-aos-duration="1200">Contact !</h1>
 
             {/* desktop view */}
             <div className='w-full h-[60vh] hidden lg:flex'>
@@ -160,7 +160,7 @@ const ContactFooter = () => {
 
                         <ul className='flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 pt-4'>
                             <li className=''>
-                                <NavLink to="/" className="text-[12px] text-[#fff] nav_link">Home</NavLink>
+                                <NavLink to="/" className="text-[12px] text-[#fff]">Home</NavLink>
                             </li>
                             <li className=''>
                                 <NavLink to="/about" className="text-[12px] text-[#fff]">About Us</NavLink>

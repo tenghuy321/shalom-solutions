@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <>
       <ScrollToTop />
-      <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
+      <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px] xl:text-[14px]">
         <div className="relative w-full h-full rounded-r-xl">
           <div className="testing1 w-full h-full flex flex-col relative">
             {/* Top contact info */}
@@ -52,6 +52,8 @@ const Contact = () => {
                 <p>093 777 253</p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com">shalomsolution@gmail.com</a>
                 <p>#14, Street 311, Sangkat Boeng Kar Ti Pir, Khan Toul Kork, Phnom Penh.</p>
+                <p>Opening Hours: Monday - Friday <br />
+                  8:00 AM - 5:00 PM</p>
               </div>
             </div>
           </div>
@@ -119,7 +121,7 @@ const Contact = () => {
                     <p className="text-[16px] font-[500]">ACCOUNTING & TAX SERVICE</p>
                   </div>
                 </div>
-                <h1 className='text-[14px] pt-10 pl-[15%] xl:pl-[27%] pr-[20px]'>Take the first step towards securing your financial future. Our expert advisors are ready to guide you through the tax process. Click the button below to schedule a consultation and let us help you navigate the complexities of taxation.</h1>
+                <h1 className='text-[12px] xl:text-[14px] pt-10 pl-[15%] xl:pl-[27%] pr-[20px]'>Take the first step towards securing your financial future. Our expert advisors are ready to guide you through the tax process. Click the button below to schedule a consultation and let us help you navigate the complexities of taxation.</h1>
 
               </div>
             </div>

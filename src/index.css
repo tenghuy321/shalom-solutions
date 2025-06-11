@@ -1,24 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .clip-rounded-mask {
+    clip-path: path(
+      "M0,40 Q0,0 40,0 H220 Q260,0 280,40 L380,280 Q400,320 360,360 L40,360 Q0,360 0,320 Z"
+    );
+  }
+}
+
 .nav_link.active{
   background-color: #411259;
   border-radius: 30px;
-}
-
-.testing1{
-  background-image: url('assets/images/Group1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
-  color: white;
-  clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
-}
-
-
-.testing2 {
-  background-size: cover;
-  background-position: center;
-  color: white;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
 }

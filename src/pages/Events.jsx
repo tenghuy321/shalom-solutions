@@ -1,8 +1,8 @@
 import React from 'react'
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background from '../assets/images/banner.png'
-import background1 from '../assets/images/banner-1.png'
+import background2 from '../assets/images/Group2.png'
+import background1 from '../assets/images/Group1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
@@ -37,8 +37,8 @@ const Events = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col relative">
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0">
+          <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
                 <AiOutlinePhone />
@@ -105,7 +105,7 @@ const Events = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
             </div>
           </div>
@@ -187,7 +187,7 @@ const Events = () => {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-[2rem] md:mt-[5rem] pb-[2rem] gap-10 items-center justify-center px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 mt-[2rem] md:mt-[5rem] pb-[6rem] gap-10 items-center justify-center px-4 overflow-hidden">
         <div className="text-start text-[#411259] order-2 lg:order-none" data-aos="fade-right" data-aos-duration="1400">
           <h1 className="text-[16px] md:text-[20px] font-[600] mb-4">Think BiG Advisors, IMU UNIVERSITY</h1>
           <div className="flex flex-col space-y-2 text-[12px] md:text-[13px]">
@@ -206,9 +206,9 @@ const Events = () => {
           </div>
         </div>
         <div className="relative justify-self-center order-1 lg:order-none mb-20">
-          <img src={background} alt=""
+          <img src={background2} alt=""
             className="w-[90%] sm:w-[500px] md:w-[600px] lg:w-[430px] xl:w-[550px] ml-[2rem] sm:ml-[3.5rem]" />
-          <img src={background} alt=""
+          <img src={background2} alt=""
             className="w-[70%] sm:w-[450px] md:w-[500px] lg:w-[300px] xl:w-[500px] border-[5px] border-[#fff] absolute left-0 bottom-[-3.5rem] md:bottom-[-5rem] lg:bottom-[-7rem]" />
         </div>
       </div>

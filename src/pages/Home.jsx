@@ -1,7 +1,7 @@
 import person from '../assets/images/person.png'
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background from '../assets/images/banner-1.png'
+import background from '../assets/images/Group2.png'
 import background1 from '../assets/images/Group1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
@@ -90,9 +90,9 @@ const Home = () => {
 
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col items-center justify-end">
-            <div className="absolute top-4 left-10 flex items-start space-x-10">
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0">
+          <div className="w-full h-full flex flex-col items-center justify-end" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
+            <div className="absolute top-4 left-10 flex items-start space-x-10 text-[#fff]">
               <a href="tel:093777253" className="flex items-center space-x-2">
                 <AiOutlinePhone />
                 <p>093 777 253</p>
@@ -102,7 +102,7 @@ const Home = () => {
                 <p>shalomsolution@gmail.com</p>
               </a>
             </div>
-            <img src={person} alt="" className='w-[80%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
+            <img src={person} alt="" className='w-[70%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
           </div>
         </div>
         <div className='relative w-full h-full lg:-ml-[14%] xl:-ml-[13%]'>
@@ -152,7 +152,7 @@ const Home = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
 
               <div className='flex flex-col items-center pl-[14%] xl:pl-[13%] justify-center h-full text-[#411259]' data-aos="zoom-in-up" data-aos-duration="1200">
@@ -242,7 +242,7 @@ const Home = () => {
         </div>
 
         <div className='w-full h-full flex items-center justify-center overflow-hidden' style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
-          <img src={person} alt="" className='w-[50%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
+          <img src={person} alt="" className='w-[70%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
         </div>
       </section>
 
@@ -253,20 +253,20 @@ const Home = () => {
 
       <section className='relative w-full min-h-screen text-[14px] py-[1rem] md:py-[2rem] px-0 md:px-[2rem] overflow-hidden'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-          <div className="col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400]" data-aos="fade-right" data-aos-duration="1200">
-            <h1 className='text-[16px] md:text-[20px] text-[#411259] font-[600] mb-4 mt-4 md:mt-0 md:mb-6'>General FAQS</h1>
+          <div className="col-span-2 rounded-md shadow-md p-2 md:p-10 text-[10px] md:text-[14px] font-[400] bg-[#411259]" data-aos="fade-right" data-aos-duration="1200">
+            <h1 className='text-[16px] md:text-[20px] text-[#fff] font-[600] mb-4 mt-4 md:mt-0 md:mb-6 pl-0 md:pl-5'>General FAQS</h1>
             {accordionData.map((item) => (
               <div key={item.id}>
                 <h2 id={`accordion-heading-${item.id}`}>
                   <button
                     type="button"
-                    className={`bg-[#fff] flex items-center justify-between w-full p-5 text-[#000] border border-b-1 border-gray-200 gap-3 ${item.id === 1 ? 'rounded-t-xl' : ''
+                    className={`bg-[#411259] flex items-center justify-between w-full p-5 text-[#fff] gap-3 ${item.id === 1 ? 'rounded-t-xl' : ''
                       }`}
                     onClick={() => toggleAccordion(item.id)}
                     aria-expanded={openId === item.id}
                     aria-controls={`accordion-body-${item.id}`}
                   >
-                    <span className="flex items-center text-[#411259] text-start">
+                    <span className="flex items-center text-[#fff] text-start">
                       <svg className="w-5 h-5 me-2 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path
                           fillRule="evenodd"
@@ -278,18 +278,18 @@ const Home = () => {
                     </span>
                     <svg
                       data-accordion-icon
-                      className={`w-3 h-3 transition-transform duration-300 ${openId === item.id ? 'rotate-90' : ''}`}
+                      className={`w-3 h-3 transition-transform duration-300 ${openId === item.id ? 'rotate-180' : ''}`}
                       fill="none"
                       viewBox="0 0 10 6"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
+                      <path stroke="#fff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
                     </svg>
                   </button>
                 </h2>
                 <div
                   id={`accordion-body-${item.id}`}
-                  className={`${openId === item.id ? 'block' : 'hidden'} p-5 border border-b-1 border-gray-200 bg-[#fff]`}
+                  className={`${openId === item.id ? 'block' : 'hidden'} p-5 bg-[#411259]`}
                 >
                   <p className="mb-2 text-[#411259]">{item.answer}</p>
                 </div>

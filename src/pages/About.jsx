@@ -1,8 +1,9 @@
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-import background from '../assets/images/banner.png'
+// import background from '../assets/images/banner.png'
 import team from '../assets/images/team.png'
-import background1 from '../assets/images/banner-1.png'
+import background2 from '../assets/images/Group2.png'
+import background1 from '../assets/images/Group1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
@@ -70,8 +71,8 @@ const About = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden rounded-r-xl">
-          <div className="testing1 w-full h-full flex flex-col relative">
+        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
+          <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -139,7 +140,7 @@ const About = () => {
             </div>
           </div>
           <div className="w-full h-full rounded-l-xl">
-            <div className="testing2 w-full h-full relative overflow-hidden" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background2})`, backgroundSize: 'cover', backgroundPosition: 'left' }}>
               <Navbar />
             </div>
           </div>
@@ -286,7 +287,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="w-full max-w-7xl mx-auto text-[12px] lg:text-[14px] px-6 md:px-20 pt-10 pb-0 md:py-10">
+      <section className="w-full max-w-7xl mx-auto text-[12px] lg:text-[14px] px-6 md:px-20 pt-10 pb-0 md:pb-20">
         {profiles.map((profile) => {
           const isLeft = profile.imagePosition === "left";
           const isExpanded = expanded[profile.id];
@@ -294,20 +295,20 @@ const About = () => {
           return (
             <div data-aos="fade-up" data-aos-duration="1400"
               key={profile.id}
-              className={`relative w-full max-w-5xl rounded-xl text-white p-6 my-20 flex flex-col md:flex-row items-center gap-4 ${isLeft ? "md:pl-16 md:mr-auto bg-[#F7ECFE]" : "md:pr-16 md:ml-auto bg-[#411259]"
+              className={`relative w-full max-w-5xl rounded-xl text-white p-6 flex flex-col md:flex-row items-center gap-4 mt-20 md:mt-0 ${isLeft ? "md:pl-16 md:mr-auto bg-[#F7ECFE]" : "md:pr-16 md:ml-auto bg-[#411259]"
                 }`}
             >
               <div
-                className={`w-40 h-40 lg:w-60 lg:h-60 rounded-full overflow-hidden -mt-16 md:mt-0 ${isLeft
-                  ? "md:absolute md:-left-14 border-4 border-[#411259] bg-[#D9D9D9]"
-                  : "md:absolute md:-right-14 border-4 border-[#411259] bg-[#D9D9D9]"
+                className={`w-40 h-40 lg:w-52 lg:h-52 rounded-full overflow-hidden -mt-16 md:mt-0 ${isLeft
+                  ? "md:absolute md:-left-14 xl:-left-24 bg-[#D9D9D9]"
+                  : "md:absolute md:-right-14 xl:-right-24 bg-[#D9D9D9]"
                   } md:top-1/2 md:-translate-y-1/2`}
               >
                 {/* Image goes here */}
               </div>
 
               <div
-                className={`w-full text-center ${isLeft ? "text-[#411259] md:text-left md:pl-20 lg:pl-36" : "md:text-right md:pr-20 lg:pr-36"
+                className={`w-full text-center ${isLeft ? "text-[#411259]  py-6 xl:py-8 md:text-left md:pl-20 lg:pl-36" :  "py-6 xl:py-8 md:text-right md:pr-20 lg:pr-36"
                   }`}
               >
                 <h4 className="text-[20px] font-[700]">{profile.name}</h4>
