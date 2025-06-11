@@ -3,6 +3,7 @@ import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 import background2 from '../assets/images/Group3.png'
 import background1 from '../assets/images/Group1.png'
+import BgSmall from '../assets/images/banner-1.png'
 
 import CareerImage from '../assets/images/career.png'
 import ScrollToTop from '../components/ScrollToTop'
@@ -38,7 +39,7 @@ const Career = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[3%] xl:-mr-0" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
           <div className="text-[#fff] w-full h-full flex flex-col relative">
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
@@ -54,7 +55,7 @@ const Career = () => {
 
             {/* Centered About Us */}
             <div className="flex flex-1 items-center justify-center" data-aos="zoom-in-up" data-aos-duration="1400">
-              <h1 className="text-[70px] font-bold text-center lg:mr-[4rem]">Careers</h1>
+              <h1 className="text-[70px] font-bold text-center mr-[6rem] xl:mr-[4rem]">Careers</h1>
             </div>
           </div>
 
@@ -173,7 +174,7 @@ const Career = () => {
             </div>
           </div>
           <div className="w-full h-[50vh] md:h-[60vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>

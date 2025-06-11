@@ -2,6 +2,7 @@ import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 import background2 from '../assets/images/services.png'
 import background1 from '../assets/images/Group1.png'
+import BgSmall from '../assets/images/banner-1.png'
 
 import WhatWeDo from '../assets/images/WhatWeDo.png'
 import ServiceTeam from '../assets/images/person-1.png'
@@ -90,7 +91,7 @@ const Services = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
+        <div className="relative w-full h-full lg:-mr-[3%] xl:-mr-0">
           <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -103,7 +104,7 @@ const Services = () => {
               </a>
             </div>
 
-            <div className="flex flex-1 items-center justify-center lg:mr-[4rem]" data-aos="zoom-in-up" data-aos-duration="1200">
+            <div className="flex flex-1 items-center justify-center mr-[6rem] xl:mr-[4rem]" data-aos="zoom-in-up" data-aos-duration="1200">
               <h1 className="text-[70px] font-bold text-center ">Our Services</h1>
             </div>
           </div>
@@ -225,7 +226,7 @@ const Services = () => {
             </div>
           </div>
           <div className="w-full h-[50vh] md:h-[60vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>

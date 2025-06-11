@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar"
 
 import background2 from '../assets/images/Group2.png'
 import background1 from '../assets/images/Group1.png'
+import BgSmall from '../assets/images/banner-1.png'
 
 import ScrollToTop from '../components/ScrollToTop'
 import { useEffect, useState } from 'react'
@@ -31,8 +32,8 @@ const Contact = () => {
     <>
       <ScrollToTop />
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px] xl:text-[14px]">
-        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
-          <div className="testing1 w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
+        <div className="relative w-full h-full lg:-mr-[3%] xl:-mr-0">
+          <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -47,8 +48,8 @@ const Contact = () => {
 
             {/* Centered About Us */}
             <div className="flex flex-1 items-center justify-center">
-              <div className="flex flex-col space-y-4 items-start justify-center" data-aos="zoom-in-up" data-aos-duration="1200">
-                <h1 className="text-[70px] font-bold text-center lg:mr-[4rem]" >Contact Us</h1>
+              <div className="flex flex-col space-y-4 items-start justify-center mr-[6rem] xl:mr-[4rem]" data-aos="zoom-in-up" data-aos-duration="1200">
+                <h1 className="text-[70px] font-bold text-center " >Contact Us</h1>
                 <p className="text-[20px] md:text-[25px] font-[700]">Let’s connect with us!</p>
                 <p>093 777 253</p>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=shalomsolution@gmail.com">shalomsolution@gmail.com</a>
@@ -191,7 +192,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full h-screen">
-            <div className="w-full h-full flex items-center justify-center relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full flex items-center justify-center relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>

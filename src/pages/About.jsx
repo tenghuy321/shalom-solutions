@@ -1,9 +1,9 @@
 import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
-// import background from '../assets/images/banner.png'
 import team from '../assets/images/team.png'
 import background2 from '../assets/images/Group3.png'
 import background1 from '../assets/images/Group1.png'
+import BgSmall from '../assets/images/banner-1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
@@ -71,7 +71,7 @@ const About = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full lg:-mr-[5%] xl:-mr-0">
+        <div className="relative w-full h-full lg:-mr-[3%] xl:-mr-0">
           <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             {/* Top contact info */}
             <div className="absolute top-4 left-10 flex items-start space-x-10">
@@ -208,7 +208,7 @@ const About = () => {
             </div>
           </div>
           <div className="w-full h-[50vh] sm:h-[60vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>

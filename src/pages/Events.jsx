@@ -3,6 +3,8 @@ import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 import background2 from '../assets/images/Group3.png'
 import background1 from '../assets/images/Group1.png'
+import background from '../assets/images/banner.png'
+import BgSmall from '../assets/images/banner-1.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
@@ -37,7 +39,7 @@ const Events = () => {
       <ScrollToTop />
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0">
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[3%] xl:-mr-0">
           <div className="w-full text-[#fff] h-full flex flex-col relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             <div className="absolute top-4 left-10 flex items-start space-x-10">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -173,14 +175,14 @@ const Events = () => {
             </div>
           </div>
           <div className="w-full h-[50vh] md:h-[60vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>
 
               <div className='flex flex-col items-center justify-center h-full text-[#411259]' data-aos="zoom-in-up" data-aos-duration="1400">
                 <h1 className='text-[40px] font-[700] leading-none'>Our Events</h1>
-                <p className='text-[14px]'>ThinkBiGG Advisors, IMU UNIVERSITY <br /> Salom solution and imu university</p>
+                <p className='text-[14px] pt-3 text-center'>ThinkBiGG Advisors, IMU UNIVERSITY <br /> Salom solution and imu university</p>
               </div>
             </div>
           </div>
@@ -206,9 +208,9 @@ const Events = () => {
           </div>
         </div>
         <div className="relative justify-self-center order-1 lg:order-none mb-20">
-          <img src={background2} alt=""
+          <img src={background} alt=""
             className="w-[90%] sm:w-[500px] md:w-[600px] lg:w-[430px] xl:w-[550px] ml-[2rem] sm:ml-[3.5rem]" />
-          <img src={background2} alt=""
+          <img src={background} alt=""
             className="w-[70%] sm:w-[450px] md:w-[500px] lg:w-[300px] xl:w-[500px] border-[5px] border-[#fff] absolute left-0 bottom-[-3.5rem] md:bottom-[-5rem] lg:bottom-[-7rem]" />
         </div>
       </div>

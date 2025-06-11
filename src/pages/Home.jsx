@@ -3,6 +3,7 @@ import logo from '../assets/images/logo.png'
 import Navbar from "../components/Navbar"
 import background from '../assets/images/Group2.png'
 import background1 from '../assets/images/Group1.png'
+import BgSmall from '../assets/images/bgSmall.png'
 
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
@@ -88,7 +89,7 @@ const Home = () => {
 
       {/* Desktop View */}
       <section className="hidden lg:flex w-full h-screen bg-gray-100 text-[12px]">
-        <div className="relative w-full h-full overflow-hidden lg:-mr-[5%] xl:-mr-0">
+        <div className="relative w-full h-full overflow-hidden lg:-mr-[3%] xl:-mr-0">
           <div className="w-full h-full flex flex-col items-center justify-end" style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'right' }}>
             <div className="absolute top-4 left-10 flex items-start space-x-10 text-[#fff]">
               <a href="tel:093777253" className="flex items-center space-x-2">
@@ -239,7 +240,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className='w-full h-full flex items-center justify-center overflow-hidden' style={{ backgroundImage: `url(${background1})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='w-full h-full flex items-center justify-center overflow-hidden' style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <img src={person} alt="" className='w-[70%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
         </div>
       </section>
