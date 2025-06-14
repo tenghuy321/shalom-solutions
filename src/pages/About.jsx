@@ -6,6 +6,9 @@ import background1 from '../assets/images/Group1.png'
 import BgSmall from '../assets/images/banner-1.png'
 import IG from '../assets/images/ig.png'
 
+import bgNew1 from '../assets/images/bgSmall-new1.png'
+import bgNew2 from '../assets/images/bgSmall-new2.png'
+
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
 import { FaRegClock } from "react-icons/fa6";
@@ -191,17 +194,21 @@ const About = () => {
 
             </div>
           </div>
-          <div className="w-full h-[50vh] sm:h-[60vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="w-full h-[50vh] sm:h-[80vh] rounded-l-xl">
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${bgNew1})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>
 
-              <div className='flex flex-col items-center justify-center h-full text-[#411259]'>
-                <h1 className='text-[40px] font-[700] leading-none' data-aos="zoom-in-up" data-aos-duration="1200">About Us</h1>
+              <div className='flex flex-col items-center justify-center h-full text-[#411259] mb-10' data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src={logo} alt="" className='w-20 h-auto' />
               </div>
             </div>
           </div>
+        </div>
+
+        <div className='w-full h-[40vh] sm:h-[80vh] text-[#fff] flex items-center justify-center overflow-hidden -mt-[5rem] sm:-mt-[8rem] md:-mt-[11rem]' style={{ backgroundImage: `url(${bgNew2})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
+          <h1 className='text-[40px] font-[700] leading-none'>Careers</h1>
         </div>
       </section>
 
@@ -292,7 +299,7 @@ const About = () => {
               </div>
 
               <div
-                className={`w-full text-center ${isLeft ? "text-[#411259]  py-6 xl:py-8 md:text-left md:pl-20 lg:pl-36" :  "py-6 xl:py-8 md:text-right md:pr-20 lg:pr-36"
+                className={`w-full text-center ${isLeft ? "text-[#411259]  py-6 xl:py-8 md:text-left md:pl-20 lg:pl-36" : "py-6 xl:py-8 md:text-right md:pr-20 lg:pr-36"
                   }`}
               >
                 <h4 className="text-[20px] font-[700]">{profile.name}</h4>

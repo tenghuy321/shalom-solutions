@@ -7,6 +7,9 @@ import BgSmall from '../assets/images/bgSmall.png'
 import faqImage from '../assets/images/banner.png'
 import IG from '../assets/images/ig.png'
 
+import bgNew1 from '../assets/images/bgSmall-new1.png'
+import bgNew2 from '../assets/images/bgSmall-new2.png'
+
 import { AiOutlinePhone } from "react-icons/ai";
 import { TbMail } from "react-icons/tb";
 import { FaRegClock } from "react-icons/fa6";
@@ -210,23 +213,23 @@ const Home = () => {
 
             </div>
           </div>
-          <div className="w-full h-[60vh] sm:h-[80vh] rounded-l-xl">
-            <div className="w-full h-full relative" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+          <div className="w-full h-[50vh] sm:h-[80vh] rounded-l-xl">
+            <div className="w-full h-full relative" style={{ backgroundImage: `url(${bgNew1})`, backgroundSize: 'cover', backgroundPosition: 'bottom' }}>
               <div className='hidden md:block'>
                 <Navbar />
               </div>
 
-              <div className='flex flex-col items-center justify-center h-full text-[#411259]' data-aos="zoom-in-up" data-aos-duration="1200">
-                <img src={logo} alt="" className='w-20 h-auto' />
-                <h1 className='text-[18px] leading-none pt-10'>Welcome to</h1>
-                <p className='text-[60px] text-center font-bold max-w-[600px] leading-none my-2'>SHALOM</p>
-                <p className='text-center font-[200] max-w-[600px] text-[20px] tracking-[8px] leading-none'>SOLUTION</p>
+              <div className='flex flex-col items-center justify-center h-full text-[#411259] mb-10' data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src={logo} alt="" className='w-12 md:w-20 h-auto' />
+                <h1 className='text-[18px] leading-none pt-4'>Welcome to</h1>
+                <p className='text-[40px] md:text-[60px] text-center font-bold max-w-[600px] leading-none my-2'>SHALOM</p>
+                <p className='text-center font-[200] max-w-[600px] text-[16px] md:text-[20px] tracking-[8px] leading-none'>SOLUTION</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className='w-full h-full flex items-center justify-center overflow-hidden' style={{ backgroundImage: `url(${BgSmall})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='w-full h-full flex items-center justify-center overflow-hidden -mt-[4rem] sm:-mt-[8rem] md:-mt-[10rem]' style={{ backgroundImage: `url(${bgNew2})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
           <img src={person} alt="" className='w-[70%] h-auto' data-aos="fade-up" data-aos-duration="1200" />
         </div>
       </section>
